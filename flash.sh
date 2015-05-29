@@ -1,1 +1,0 @@
-git clone https://github.com/mozilla-b2g/B2G.git --quiet
