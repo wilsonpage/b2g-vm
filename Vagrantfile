@@ -8,6 +8,8 @@
 Vagrant.configure(2) do |config|
   config.vm.box = "hashicorp/precise64"
   config.vm.provision :shell, path: "bootstrap.sh"
+  config.vm.provision "file", source: "~/.gitconfig", destination: ".gitconfig"
+  config.vm.provision "file", source: "~/.bash_profile", destination: ".bash_profile"
   config.vm.provider :virtualbox do |vb|
     vb.memory = "4096"
     vb.customize ['modifyvm', :id, '--usb', 'on']
