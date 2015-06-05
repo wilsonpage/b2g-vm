@@ -31,3 +31,5 @@ if ! grep -qe "${config}" $file; then
   sudo service udev restart &> /dev/null
   echo -e "\nNew device added: '$option'\n"
 fi
+
+# TODO: Prompt to unplug and re-plug device
