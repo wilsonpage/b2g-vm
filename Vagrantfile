@@ -13,6 +13,7 @@ Vagrant.configure(2) do |config|
   config.vm.provider :virtualbox do |vb|
     vb.memory = "4096"
     vb.customize ['modifyvm', :id, '--usb', 'on']
+    vb.customize ['modifyvm', :id, '--usbehci', 'on']
     vb.customize ['usbfilter', 'add', '0', '--target', :id, '--name', 'catch-all-devices']
   end
 end
